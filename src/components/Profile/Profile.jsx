@@ -1,9 +1,4 @@
 import React from 'react';
-import user from '../../../src/user.json'
-
-const userPtofile = user;
-console.log(userPtofile)
-
 
 function Profile({username, tag, location, avatar, stats}) {
    
