@@ -8,7 +8,7 @@ console.log(userPtofile)
 function Profile({username, tag, location, avatar, stats}) {
    
     return  <div className="profile">
-  <div class="description">
+  <div className="description">
     <img
       src={avatar}
       alt={username}
