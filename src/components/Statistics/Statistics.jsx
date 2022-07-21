@@ -1,27 +1,30 @@
-function Statistics({stats}) {
+function Statistics({ stats }) {
+    
     return (
-        stats.map(item =>  <section class="statistics">
-  <h2 class="title">Upload stats</h2>
+        stats.map(item => <section className="statistics">
+  <h2 className="title">Upload stats</h2>
 
-  <ul class="stat-list">
-    <li class="item">
-                    <span class="label">{ item.label}</span>
-                    <span class="percentage">{ item.percentage}%</span>
+  <ul className="stat-list">
+    <li key = {item.id} className="item">
+                    <span className="label">{ item.label}</span>
+      <span className="percentage">{item.percentage}%</span>
     </li>
-    <li class="item">
-      <span class="label">{ item.label}</span>
-      <span class="percentage">{ item.percentage}%</span>
+    {/* <li key = {item.id} className="item">
+      <span className="label">{ item.label}</span>
+      <span className="percentage">{item.percentage}%</span>
     </li>
-    <li class="item">
-      <span class="label">{ item.label}</span>
-      <span class="percentage">{ item.percentage}%</span>
+    <li key = {item.id} className="item">
+      <span className="label">{ item.label}</span>
+      <span className="percentage">{item.percentage}%</span>
     </li>
-    <li class="item">
-      <span class="label">{ item.label}</span>
-      <span class="percentage">{ item.percentage}%</span>
-    </li>
+    <li key = {item.id} className="item">
+      <span className="label">{ item.label}</span>
+      <span className="percentage">{item.percentage}%</span>
+    </li> */}
   </ul>
 </section>)
+        
+      
         
     )
 }
