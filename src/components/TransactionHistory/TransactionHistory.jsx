@@ -1,13 +1,15 @@
 import PropTypes from 'prop-types';
+import style from "./TransactionHistory.module.css";
+
 
 function TransactionHistory({ items }) {
   return (
-     <table className="transaction-history">
-  <thead>
+     <table className={style.transactionHistory}>
+  <thead className={style.transaction}>
     <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
+      <th className = {style.history}>Type</th>
+      <th className= {style.history}>Amount</th>
+      <th className= {style.history}>Currency</th>
     </tr>
       </thead>
       
