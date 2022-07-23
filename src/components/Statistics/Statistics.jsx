@@ -1,32 +1,33 @@
-function Statistics({ stats }) {
-    
-    return (
-        stats.map(item => <section className="statistics">
-  <h2 className="title">Upload stats</h2>
+import PropTypes from 'prop-types';
+import style from "./Statistics.module.css"
 
-  <ul className="stat-list">
-    <li key = {item.id} className="item">
-                    <span className="label">{ item.label}</span>
-      <span className="percentage">{item.percentage}%</span>
-    </li>
-    {/* <li key = {item.id} className="item">
-      <span className="label">{ item.label}</span>
-      <span className="percentage">{item.percentage}%</span>
-    </li>
-    <li key = {item.id} className="item">
-      <span className="label">{ item.label}</span>
-      <span className="percentage">{item.percentage}%</span>
-    </li>
-    <li key = {item.id} className="item">
-      <span className="label">{ item.label}</span>
-      <span className="percentage">{item.percentage}%</span>
-    </li> */}
+function Statistics({ title, stats }) {
+     return (
+        <section className={style.statistics}>
+  <h2 className={style.title}>Upload stats</h2>
+
+  <ul className={style.statList}>
+    {stats.map(item => <li key = {item.id} className={style.item}>
+                    <span className={style.label}>{ item.label}</span>
+      <span className={style.percentage}>{item.percentage}%</span>
+    </li>  ) } 
   </ul>
-</section>)
+</section>
         
       
         
     )
+}
+
+
+Statistics.propTypes = {
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+  })
+)
 }
 
 export default Statistics
