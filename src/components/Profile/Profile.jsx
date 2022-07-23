@@ -18,15 +18,15 @@ function Profile({username, tag, location, avatar, stats}) {
   <ul className={styles.stats}>
     <li className= {styles.item}>
       <span className={styles.label}>Followers</span>
-      <span className={styles.quantity}>1000</span>
+      <span className={styles.quantity}>{stats.followers}</span>
     </li>
     <li className= {styles.item}>
       <span className={styles.label}>Views</span>
-      <span className={styles.quantity}>2000</span>
+          <span className={styles.quantity}>{stats.views}</span>
     </li>
     <li className= {styles.item}>
       <span className={styles.label}>Likes</span>
-      <span className={styles.quantity}>3000</span>
+      <span className={styles.quantity}>{stats.likes}</span>
     </li>
   </ul>
 </div>
