@@ -4,23 +4,25 @@ import style from "./TransactionHistory.module.css";
 
 function TransactionHistory({ items }) {
   return (
-     <table className={style.transactionHistory}>
-  <thead className={style.transaction}>
-    <tr>
-      <th className = {style.history}>Type</th>
-      <th className= {style.history}>Amount</th>
-      <th className= {style.history}>Currency</th>
-    </tr>
-      </thead>
-      
-  <tbody>
-   {items.map(item => <tr key={item.id}>
-      <th>{item.type}</th>
-      <th>{item.amount}</th>
-      <th>{item.currency}</th>
-    </tr> )}   
-  </tbody>
-</table>
+     <table class={style.transactionHistory}>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Amount</th>
+        <th>Currency</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {items.map(item => (
+        <tr key={item.id}>
+          <td>{item.type}</td>
+          <td>{item.amount}</td>
+          <td>{item.currency}</td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
    )
 } 
 
